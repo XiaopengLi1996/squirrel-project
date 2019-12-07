@@ -36,14 +36,14 @@ class Squirrel(models.Model):
 	)
 
     Date = models.DateField(
-	help_text = "Date"
+	help_text = "Date",
 	null = True,
 	)
 
     Age_Choices = [
-	(Adult = 'Adult'),
-	(Jucenile = 'Juvenile'),
-	(Unknown = '?'),
+	(Adult, 'Adult'),
+	(Jucenile, 'Juvenile'),
+	(Unknown, '?'),
     ]
 
     Age = models.CharField(
