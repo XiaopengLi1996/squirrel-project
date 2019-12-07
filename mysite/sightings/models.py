@@ -22,6 +22,9 @@ class Squirrel(models.Model):
         primary_key = True,
 	) 
 
+    AM = 'AM'
+    PM = 'PM'
+    
     Shift_Choices = [
 	(AM, 'AM'),
 	(PM, 'PM'),
@@ -31,19 +34,23 @@ class Squirrel(models.Model):
 	choices = Shift_Choices,
 	default = AM,
 	max_length = 2,
-	null = Ture,
+	null = True,
 	help_text = "Shift",
 	)
 
     Date = models.DateField(
-	help_text = "Date"
+	help_text = "Date",
 	null = True,
 	)
-
+    
+    Adult = 'Adult'
+    Juvenile = 'Juvenile'
+    Unknown = '?'
+    
     Age_Choices = [
-	(Adult = 'Adult'),
-	(Jucenile = 'Juvenile'),
-	(Unknown = '?'),
+	(Adult , 'Adult'),
+	(Juvenile , 'Juvenile'),
+	(Unknown , '?'),
     ]
 
     Age = models.CharField(
@@ -52,11 +59,15 @@ class Squirrel(models.Model):
 	blank = True,
 	help_text = "Age",
 	)
+    
+    Gray = 'Gray'
+    Black = 'Black'
+    Cinnammon = 'Cinnammon'
 
     Color_Choices = [
 	(Gray, 'Gray'),
 	(Black, 'Black'),
-	(Cinnammon', 'Cinnammon'),
+	(Cinnammon, 'Cinnammon'),
     ]
 
     Primary_Fur_Color = models.CharField(
@@ -66,10 +77,13 @@ class Squirrel(models.Model):
 	null = True,
 	help_text = "Primary Fur Color",
 	)
-    
+
+    Above_Ground = 'Above Ground'
+    Ground_Plane = 'Ground Plane'    
+
     Loc_Choices = [ 
-	(Above Groud, 'Above Ground'),
-	(Ground Plane, 'Groud Plane'),
+	(Above_Ground, 'Above Ground'),
+	(Ground_Plane, 'Ground Plane'),
     ]
 	
     Location = models.CharField(
@@ -80,7 +94,7 @@ class Squirrel(models.Model):
 	help_text = "Location",
         )
 	
-    Specific_Locaiton = models.CharField(
+    Specific_Location = models.CharField(
 	max_length = 50,
 	null = True,
 	help_text = "Specific Location",

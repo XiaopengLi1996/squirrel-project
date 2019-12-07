@@ -1,4 +1,4 @@
-from sightings.models import
+from sightings.models import Squirrel
 import csv
 from django.core.management import BaseCommand
 
@@ -45,7 +45,7 @@ class Command(BaseCommand):
                 indifferent = row[27]
                 run_from = row[28]
 
-                db = squirrel(
+                db = Squirrel(
 			X = longitude, 
 			Y = latitude, 
 			Unique_Squirrel_ID = unique_squirrel_id, 
