@@ -1,4 +1,3 @@
-Learn more or give us feedback
 from django.core.management.base import BaseCommand
 from sightings.models import Squirrel
 import csv
