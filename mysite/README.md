@@ -84,6 +84,6 @@ Run the server and then go to the brower. Add different views location to the ur
 
 **Team Member**: Xiaopeng Li,  Jianfeng Yin 
 
-**UNIs**: [xl2914,jy3033]
+**UNIs**: [xl2914, jy3033]
 
 
