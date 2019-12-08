@@ -1,29 +1,7 @@
-
-{% load static %}
 <html>
-    <head>
-        <title>Squirrel Tracker</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'sightings/style.css' %}">
-    </head>
-    <body>
-	<nav>
-            <h1><a href="/map/">Squirrel Tracker</a></h1>
-	    <a href="/sightings/">Sightings</a>
-	    <a href="/sightings/add">Add Sighting</a>
-	    <a href="/sightings/stats">Statistics</a>
-	    <a href="/map/">Map</a>
-        </nav>     
-         {% block content %}
-         {% endblock %}
-    </body>
-</html>
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'sightings/style.css' %}">
-{% block content %}
-        <title></title>
-    <h2>Add a new Sighting</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
+<h2>Add Sighting</h2>
+<form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
-{% endblock %}
+<button type="submit" class="save btn btn-default">Save</button>
+</form>
+</html>

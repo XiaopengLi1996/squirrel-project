@@ -1,43 +1,33 @@
 <html>
 <head>
-<title> Sighitng Statistics Information for Squirrel  </title>
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'sightings/style.css' %}">
-<style>
-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-th, td {
-	padding: 8px;
-	text-align: left;
-	border-bottom: 1px solid #ddd;
-}
-tr:hover {background-color:#f5f5f5;}
-</style>
+<h2> Statistics Description of Squirrels  </h2>
+
 </head>
 <body>
-	<h2> <font color="SlateBlue"> General Statistics of Sightings </font> </h2>
-<table>
-	<th>Squirrel Unique ID</th>
-     	<th>Longitude found</th>
-	<th>Lactitude found</th>
-	<th>Age</th>
-	<th>Primary Fur Color</th>
-	<th>Date</th>
-	<th>Eating</th>	
-	{% for squirrel in squirrels %}
-	   <tr> 
-		   <td><a href="{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a></td>
-		   <td>{{squirrel.X}}</td>
-		   <td>{{squirrel.Y}}</td>
-		   <td>{{squirrel.Age}}</td>
-		   <td>{{squirrel.Primary_Fur_Color}}</td>
-		   <td>{{squirrel.Date}}</td>
-		   <td>{{squirrel.Eating}}</td>
-	   </tr>
-	{% endfor %}
-
-</table>
+        
+        <p>
+	The total number of squirrels: {{counts}}.
+	</p>
+	<p>
+        The total number of juvenile squirrels: {{jun_counts}}.
+        </p>
+	<p>
+        The total number of adult squirrels: {{adt_counts}}.
+        </p>
+	<p>
+        The total number of black squirrels: {{black_counts}}.
+        </p>
+	<p>
+        The total number of gray squirrels: {{gray_counts}}.
+        </p>
+	<p>
+        The total number of cinnamon squirrels: {{cin_counts}}.
+        </p>	
+	<p>
+        The total number of eating squirrels: {{eat_counts}}.
+        </p>
+	<p>
+        The total number of running squirrels: {{run_counts}}.
+        </p>
 </body>
 </html>

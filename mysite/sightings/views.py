@@ -2,13 +2,14 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from .models import Squirrel
 from .forms import getFormforSightings
-from django.views.generic.edit import CreateView
-from django.urls import reverse, reverse_lazy
 
-def list(request, *args, **kwargs):
+def list(request):
     list_ = Squirrel.objects.all()
     fields = ['Unique_Squirrel_ID', 'Date']
-    context = {'squirrels': list_, 'fields': fields, }
+    context = {
+	'squirrels': list_, 
+	'fields': fields,
+	 }
     return render(request, 'sightings/list.html', context)
 
 def update(request, unique_id):
@@ -40,10 +41,17 @@ def add(request):
     
 
 def stats(request):
-    list1 = Squirrel.objects.all()
-    context = {
-        'squirrels': list1 
-    }
+    context ={
+	'counts': Squirrel.objects.count(),
+	'jun_counts': Squirrel.objects.filter(Age='Juvenile').count(),
+	'adt_counts': Squirrel.objects.filter(Age='Adult').count(),
+	'black_counts': Squirrel.objects.filter(Primary_Fur_Color='Black').count(),
+	'gray_counts': Squirrel.objects.filter(Primary_Fur_Color='Gray').count(),
+	'cin_counts': Squirrel.objects.filter(Primary_Fur_Color='Cinnammon').count(),
+	'eat_counts': Squirrel.objects.filter(Eating=True).count(),
+	'run_counts': Squirrel.objects.filter(Running=True).count(),
+	}
+
     return render(request, 'sightings/stats.html', context)
 
       
