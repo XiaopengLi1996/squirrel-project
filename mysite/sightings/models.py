@@ -7,6 +7,7 @@ class Squirrel(models.Model):
 	decimal_places = 17,
 	help_text = "Location's Longitude",
         null = True,
+	blank = True,
 	)
 
     Y = models.DecimalField(
@@ -14,6 +15,7 @@ class Squirrel(models.Model):
         decimal_places = 17,
         help_text = "Location's Latitude",
         null = True, 
+	blank = True,
         ) 
 
     Unique_Squirrel_ID = models.CharField(
@@ -36,11 +38,13 @@ class Squirrel(models.Model):
 	max_length = 2,
 	null = True,
 	help_text = "Shift",
+        blank = True,
 	)
 
     Date = models.DateField(
 	help_text = "Date",
 	null = True,
+	blank = True,
 	)
     
     Adult = 'Adult'
@@ -96,6 +100,7 @@ class Squirrel(models.Model):
 	
     Specific_Location = models.CharField(
 	max_length = 50,
+	blank = True,
 	null = True,
 	help_text = "Specific Location",
 	)
