@@ -1,35 +1,26 @@
 <html>
-  <head>
-    <title>List of Squirrels</title> 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body>
+    <h1>List of Squirrel Sightings</h1>
+    <nav>
+      <h3>Navigation Bar</h3>
+      <a href="/map/">Squirrel Tracker</a>
+      <br />
+      <a href="/sightings/add">Add Sighting</a>
+      <br />
+      <a href="/sightings/stats">Statistics Info</a>
+    </nav>
+    <br />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <h2>List of Squirrel Sightings</h2>
-  <br>
-  <a href="add/" class="button--style-red">
-    <button type="button" class="btn btn-primary">
-      Add Sighting
-    </button>
-  </a>
-  <br>
-  <br>
-  <p>Search the table for Unique Squirrel ID, Date:</p>  
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
-  <br>
-  <p>Click on link to edit sighting</p>
-  <table class="table table-bordered table-striped">
-    
+  <style>
+    table {font-family: arial, sans-serif; border-collapse: collapse; width: 100%;}
+    td, th {border: 1px solid #dddddd;text-align: left;padding: 8px;}
+    tr:nth-child(even) {background-color: #f0f0f0;}
+    th {background-color: blue;color: white;}
+   
+  </style>
+  
+  <h3>Edit Squirrel Info by Click the Link</h3>
+  <table>
     <thead>
       <tr>
         {% for field in fields %}  
@@ -37,28 +28,19 @@
         {% endfor %}
       </tr>
     </thead>
-    <tbody id="myTable">
+
+    <tbody>
       {% for squirrel in squirrels %}
         <tr>
 	  <td><a href="{{squirrel.Unique_Squirrel_ID}}">{{squirrel.Unique_Squirrel_ID}}</a></td>
+          <td>{{squirrel.X}}</td>
+	  <td>{{squirrel.Y}}</td>
+	  <td>{{squirrel.Age}}</td>
 	  <td>{{squirrel.Date}}</td>
         </tr>
       {% endfor %}
     </tbody>
   </table>  
-  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
-</div>
-
-<script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-</script>
 
 </body>
 </html>

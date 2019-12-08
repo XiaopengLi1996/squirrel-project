@@ -5,7 +5,7 @@ from .forms import getFormforSightings
 
 def list(request):
     list_ = Squirrel.objects.all()
-    fields = ['Unique_Squirrel_ID', 'Date']
+    fields = ['Links by Squirrel ID', 'longitude', 'Latitude', 'Age', 'Date']
     context = {
 	'squirrels': list_, 
 	'fields': fields,

@@ -1,18 +1,30 @@
 <html>
-<h2>Add Squirrel Sighting Information</h2>
-<form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_table }}
-<button type="submit" class="save btn btn-default">Save</button>
-</form>
-<nav>
-    <h3>Navigation Bat</h3>
-    <a href="/map/">Squirrel Tracker</a>
-    <br />
-    <a href="/sightings/">Sightings List</a>
-    <br />
-    <a href="/sightings/add">Add Sighting</a>
-    <br />
-    <a href="/sightings/stats">Statistics Info</a>
-</nav>
 
+<style>
+body {
+  background-image: url(https://media.nbcnewyork.com/images/652*367/adorable-animal-autumn-109558.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 150% 160%;
+}
+</style>
+
+<body>
+  <h2>Add Squirrel Sighting Information</h2>
+  <body> 
+    <form method="POST" class="post-form">{% csrf_token %}
+      {{ form.as_ul }}
+      <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    
+    <nav>
+      <h3>Navigation Bar</h3>
+      <a href="/map/">Squirrel Tracker</a>
+      <br />
+      <a href="/sightings/">Sightings List</a>
+      <br />
+      <a href="/sightings/stats">Statistics Info</a>
+    </nav>
+  <body/>
+  
 </html>

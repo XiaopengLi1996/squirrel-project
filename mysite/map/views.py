@@ -2,7 +2,7 @@ from django.shortcuts import render
 from sightings.models import Squirrel
 
 def map(request, *args, **kwargs):
-    sightings = Squirrel.objects.all()[:30]
+    sightings = Squirrel.objects.all()[:60]
     context = {
         'sightings':sightings
     }
