@@ -1,9 +1,5 @@
 # Tools for Analytics Project : Squirrel sightings Tracking Web
 
-> **Group Name**: Proejct Group 70, Section 2  
-> **Group Member**: Xiaopeng Li ,  Jianfeng Yin 
-> **UNIs**: [xl2914,jy3033] 
-
 This is a README file intended to describe our squirrel sightings tracking tools. This application can import the 2018 Central Park Squirrel Census data and allow his team to add, update, and view squirrel data. 
 
 ## Content
