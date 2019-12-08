@@ -24,19 +24,16 @@ def update(request, unique_id):
     }
     return render(request, 'sightings/update.html', context)
 
-def add(request):
-    if request.method == 'POST':
-        form = getFormforSightings(request.POST)
-        if form.is_valid():
-            a = form['Unique_Squirrel_ID'].value()
-            sighting = form.save(commit=False)
-            sighting.save()
-            return redirect(f'/sightings/{a}')
-    else:
-        form = getFormforSightings()
+def add(request): 
+    form = getFormforSightings(request.POST)
+    if form.is_valid():
+        a = form['Unique_Squirrel_ID'].value()
+        sighting = form.save(commit=False)
+        sighting.save()
+        return redirect(f'/sightings/{a}')
     context ={
-        'form':form,
-    }
+	'form':form
+	}    
     return render(request, 'sightings/add.html', context)
     
 
@@ -55,4 +52,3 @@ def stats(request):
     return render(request, 'sightings/stats.html', context)
 
       
-# Create your views here.
