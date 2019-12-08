@@ -1,29 +1,30 @@
-
-{% load static %}
 <html>
-    <head>
-        <title>Squirrel Tracker</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'sightings/style.css' %}">
-    </head>
-    <body>
-	<nav>
-            <h1><a href="/map/">Squirrel Tracker</a></h1>
-	    <a href="/sightings/">Sightings</a>
-	    <a href="/sightings/add">Add Sighting</a>
-	    <a href="/sightings/stats">Statistics</a>
-	    <a href="/map/">Map</a>
-        </nav>     
-         {% block content %}
-         {% endblock %}
-    </body>
-</html>
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'sightings/style.css' %}">
-{% block content %}
-        <title></title>
-    <h2>Add a new Sighting</h2>
+
+<style>
+body {
+  background-image: url(https://media.nbcnewyork.com/images/652*367/adorable-animal-autumn-109558.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 150% 160%;
+}
+</style>
+
+<body>
+  <h2>Add Squirrel Sighting Information</h2>
+  <body> 
     <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+      {{ form.as_ul }}
+      <button type="submit" class="save btn btn-default">Save</button>
     </form>
-{% endblock %}
+    
+    <nav>
+      <h3>Navigation Bar</h3>
+      <a href="/map/">Squirrel Tracker</a>
+      <br />
+      <a href="/sightings/">Sightings List</a>
+      <br />
+      <a href="/sightings/stats">Statistics Info</a>
+    </nav>
+  <body/>
+  
+</html>
