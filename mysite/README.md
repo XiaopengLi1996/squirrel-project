@@ -9,7 +9,8 @@ This is a README file intended to describe our squirrel sightings tracking tools
 - [Dependencies](#heading-4)
 - [Management Commandds](#heading-5)
 - [API](#heading-6)
-- [Project Team](#heading-7)
+- [Server Link](#heading-7)
+- [Project Team](#heading-8)
 
 
 <a name="heading"></a>
@@ -78,9 +79,13 @@ Run the server and then go to the brower. Add different views location to the ur
 * **Located at**: /sightings/stats
 
 <a name="heading-7"></a>
+## Server Link
+**Link**: [https://ieor-4501-255422.appspot.com](https://ieor-4501-255422.appspot.com)
+
+<a name="heading-8"></a>
 ## Project Team
 
-**Group**: Proejct Group 70, Section 2      
+**Group**: Project Group 70, Section 2      
 
 **Team Member**: Xiaopeng Li,  Jianfeng Yin 
 
