@@ -80,10 +80,10 @@ Run the server and then go to the brower. Add different views location to the ur
 <a name="heading-7"></a>
 ## Project Team
 
-**Group **: Proejct Group 70, Section 2      
+**Group**: Proejct Group 70, Section 2      
 
 **Team Member**: Xiaopeng Li,  Jianfeng Yin 
 
-**UNIs**: [xl2914,jy3033]
+**UNIs**: [xl2914, jy3033]
 
 
