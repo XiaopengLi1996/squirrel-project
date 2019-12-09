@@ -1,20 +1,22 @@
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 from sightings.models import Squirrel
+from django.http import HttpResponse
+
 import csv
 
 class Command(BaseCommand):
-    help = 'Export the data in CSV format.'
+    help = 'Export data'
+
+    def add_arguments(self, parser):
+        parser.add_argument('file_path', help='filepath name')
 
     def handle(self, *args, **kwargs):
-        with open('export_squirrel_data.csv', mode='w') as csvfile:
-            writer = csv.writer(csvfile, delimiter = ',')
-            all_fields = [a.name for a in Squirrel._meta.get_fields()]
-            fieldnames = [Squirrel._meta.get_field(b).help_text for b in all_fields[1:]]
-            writer.writerow(fieldnames)
-            for i in range(len(Squirrel.objects.all())):
-                rowval=list()
-                for j in all_fields:
-                    if j == 'id': continue
-                    rowval.append(getattr(Squirrel.objects.all()[i],j))
-                writer.writerow(rowval)
-        csvfile.close
+        meta = Squirrel._meta
+        field_names = [i.name for i in meta.fields]
+        file_path = kwargs['file_path']
+        print(file_path)
+        with open(file_path,'w') as csvfile:
+            data_ = csv.writer(csvfile)
+            data_.writerow(field_names)
+            for obj in Squirrel.objects.all():
+                data_.writerow([getattr(obj, field) for field in field_names])

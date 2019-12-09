@@ -4,7 +4,7 @@ from django.core.management import BaseCommand
 
 class Command(BaseCommand):
 
-    help = 'Import Data from the 2018 census file (in CSV format)'
+    help = 'Import Data'
 
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
