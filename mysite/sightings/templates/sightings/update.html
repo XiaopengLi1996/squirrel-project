@@ -9,14 +9,14 @@
       background-size: 150% 160%;
 }
   </style>
-  <body>
+  <body style="font-family:verdana;">
     <form action="" method="post", class="post-form">
       {% csrf_token %}
       {{ form.as_ul }}
       <input type="submit" name = "update" value="Update Sighting">
     </form>
     
-    <nav>
+    <nav style="font-family:verdana;">
       <h3>Navigation Bar</h3>
       <a href="/map/">Squirrel Tracker</a>
       <br />

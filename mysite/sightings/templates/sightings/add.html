@@ -1,23 +1,24 @@
 <html>
 
 <style>
-body {
-  background-image: url(https://media.nbcnewyork.com/images/652*367/adorable-animal-autumn-109558.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 150% 160%;
+  body {
+    background-image: url(https://media.nbcnewyork.com/images/652*367/adorable-animal-autumn-109558.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 150% 160%;
 }
+ 
 </style>
 
 <body>
-  <h2>Add Squirrel Sighting Information</h2>
-  <body> 
+  <h2 style="font-family:verdana; style="font-size:120%;">Add Squirrel Sighting Information</h2>
+  <body style="font-family:verdana;"> 
     <form method="POST" class="post-form">{% csrf_token %}
       {{ form.as_ul }}
       <button type="submit" class="save btn btn-default">Save</button>
     </form>
     
-    <nav>
+    <nav style="font-family:verdana;">
       <h3>Navigation Bar</h3>
       <a href="/map/">Squirrel Tracker</a>
       <br />
