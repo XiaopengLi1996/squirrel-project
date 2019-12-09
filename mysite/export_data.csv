@@ -1,5 +1,5 @@
 X,Y,Unique_Squirrel_ID,Shift,Date,Age,Primary_Fur_Color,Location,Specific_Location,Running,Chasing,Climbing,Eating,Foraging,Other_Activities,Kuks,Quaas,Moans,Tail_flags,Tail_twitches,Approaches,Indifferent,Runs_from
--73.95613449378610000,40.79408238840860000,37F-PM-1014-03,AM,2018-10-14,,,Above Ground,,False,False,False,False,False,,False,False,False,False,False,False,False,False
+-73.95613449378610000,40.79408238840860000,37F-PM-1014-03,PM,2018-10-14,,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
 -73.95696709006950000,40.79487928568130000,37E-PM-1006-03,PM,2018-10-06,Adult,Gray,Ground Plane,,True,False,False,False,False,,False,False,False,False,False,False,False,True
 -73.97683117510040000,40.76671780725580000,2E-AM-1010-03,AM,2018-10-10,Adult,Cinnamon,Above Ground,,False,False,True,False,False,,False,False,False,False,False,False,True,False
 -73.97572498341410000,40.76970326067550000,5D-PM-1018-05,PM,2018-10-18,Juvenile,Gray,Above Ground,,False,False,True,False,False,,False,False,False,False,False,False,False,True
@@ -3017,10 +3017,4 @@ X,Y,Unique_Squirrel_ID,Shift,Date,Age,Primary_Fur_Color,Location,Specific_Locati
 -73.96658719935170000,40.78367750648830000,22D-PM-1012-07,PM,2018-10-12,Adult,Gray,Ground Plane,,False,False,False,True,True,,False,False,False,False,False,False,True,False
 -73.96399412278640000,40.78991523279120000,29B-PM-1010-02,PM,2018-10-10,,Gray,Ground Plane,,False,False,False,True,False,,False,False,False,False,False,False,True,False
 -73.97547941915530000,40.76964044890250000,5E-PM-1012-01,PM,2018-10-12,Adult,Cinnamon,Ground Plane,,False,False,False,True,True,,False,False,False,False,False,True,False,False
-1.00000000000000000,1.00000000000000000,12345678,AM,,,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
-1.00000000000000000,1.00000000000000000,2345678,,,,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
-1.00000000000000000,1.00000000000000000,1996,,,,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
-,,1998,,,,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
-,,1995,AM,,Adult,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
-,,19954,AM,,Adult,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
-,,199545,AM,,Adult,,,,False,False,False,False,False,,False,False,False,False,False,False,False,False
+,,SM4763,AM,,Juvenile,Black,,,False,False,False,False,False,Shitting,False,False,False,False,False,False,False,False
